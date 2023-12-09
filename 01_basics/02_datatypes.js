@@ -1,6 +1,6 @@
 "use strict"; // treats all js code as a newer version
 
-// alert("Hello"); // we are using nodejs that's why giving error in browser if we run then it will run fine
+// alert("Hello"); // we are using nodejs that's why giving error, if we run on browser then it will run fine
 
 console.log(3
     +3); // code readibility should be our high priority
