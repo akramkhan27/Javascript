@@ -47,4 +47,30 @@ console.log(typeof views);
 console.log(typeof Me);
 console.log(typeof You);
 
+// ******************--------Memory---------***********************************
+
+// Stack (primitive) and Heap (non-primitive)
+
+let myName="Akram";
+let yourName=myName;
+
+console.log(yourName);
+yourName="Khan"
+console.log(myName);
+console.log(yourName);
+
+
+let myid1={
+    email:"akramkhan.gmail.com",
+    pass:"asasxasd"
+}
+let myid2=myid1;
+console.log(myid1);
+console.log(myid2);
+myid2.pass="akramkhan";
+console.log(myid1);
+console.log(myid2);
+
+
+
 
