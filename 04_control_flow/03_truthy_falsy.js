@@ -40,4 +40,9 @@ val1=undefined ?? 10;
 const softy=20;
 softy<=13?console.log("softy price is less than  13"):console.log("softy price is greater than 13");;
 
+// output of below is true
+false==0
+false==''
+0==''
+
 
