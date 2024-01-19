@@ -19,12 +19,24 @@
         <p>Lorem ipsum dolor sit amet.</p>
         <input type="password" name="" id="">
         <ul>
-            <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
+            <li class="list-item">One</li>
+            <li class="list-item">Two</li>
+            <li class="list-item">Three</li>
+            <li class="list-item">Four</li>
         </ul>
     </div>
 </body>
+
+
+<!-- 
+    Tested on :-
+    https://en.wikipedia.org/wiki/Brendan_Eich
+
+    document.getElementById('firstHeading');
+    document.getElementById('firstHeading').innerHTML='<h1>Akram Khan</h1>' 
+
+-->
+
 
 <!-- document.getElementById('title');
     document.getElementById('title').id;
@@ -73,16 +85,53 @@
         myLi.style.padding="20px";
         myLi.innerText;
         myLi.innerText="five";
+
+        document.querySelectorAll('li');
+        NodeList(3) [li, li, li]
+        const myNodeLi= document.querySelectorAll('li');
+        myNodeLi.style.backgroundColor="green"; --- Error
+        myNodeLi[0].style.backgroundColor="blue";
+        'blue'
+        const myH1= document.querySelectorAll('h1');
+        myH1[0].style.color="purple";
+        'purple'
+        myNodeLi.forEach(function (l){
+        l.style.backgroundColor="red";
+        })
+
+        -----after adding one more li which is fourth and giving all li a class name - 'list-item'----
+        document.getElementsByClassName('list-item');
+        const myLiItem=document.getElementsByClassName('list-item');
+        const convertedLIArray=Array.from(myLiItem);
+        convertedLIArray.forEach(function (li){
+        li.style.color="yellow";
+        })
+
+
+
+        Tested on :-
+        https://en.wikipedia.org/wiki/JavaScript
+
+        const myH2=document.querySelectorAll('h2');
+        myH2[0].innerText;
+        'Contents'
+        myH2[1].innerText;
+        'History'
+        myH2[3].innerText;
+        'Website client-side usage'
+
+        const myHead= document.querySelectorAll('.mw-headline');
+        myHead[0].innerText;
+        'History'
+
+        myHead.forEach(function (h){
+        h.style.color="yellow";
+        h.style.backgroundColor="black";
+        h.style.padding="30px";
+        h.innerText="Akram";
+        })
+
  -->
 </html>
 
 
-
-<!-- 
-    Tested on :-
-    https://en.wikipedia.org/wiki/Brendan_Eich
-
-    document.getElementById('firstHeading');
-    document.getElementById('firstHeading').innerHTML='<h1>Akram Khan</h1>' 
-
--->
