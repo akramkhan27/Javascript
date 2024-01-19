@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | learn</title>
+</head>
+<body style="background-color: black; color:aliceblue">
+    <div class="parent">
+        <div class="days">Monday</div>
+        <div class="days">Tuesday</div>
+        <div class="days">Wednesday</div>
+        <div class="days">Thursday</div>
+        <div class="days">Friday</div>
+    </div>
+</body>
+<script>
+    const parent= document.querySelector(".parent");
+    // console.log(parent);
+    // console.log(parent.children); // html collection
+    // console.log(parent.children[1]);
+    // console.log(parent.children[1].innerText);
+
+    // for(let i=0;i<parent.children.length;i++){
+    //     console.log(parent.children[i].innerText);
+    // }
+
+    parent.children[1].style.color="orange";
+    console.log(parent.firstElementChild);
+    console.log(parent.lastElementChild);
+
+    const mydays= document.querySelector(".days");
+    console.log(mydays);
+    console.log(mydays.parentElement);
+    console.log(mydays.nextElementSibling);
+    console.log("Nodes: ",parent.childNodes); // line break also count in chils for only one nodes
+
+</script>
+</html>
