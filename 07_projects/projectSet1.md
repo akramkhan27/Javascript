@@ -62,3 +62,16 @@ form.addEventListener('submit', function (e) {
     result.innerHTML = `<span>BMI Index is : ${bmi}</span>`;
   }
 });
+
+```
+
+### Project 3
+
+``` Javascript
+
+const clock=document.getElementById("clock");
+
+setInterval(function(){
+  let myDate=new Date();
+  clock.innerHTML=myDate.toLocaleTimeString(); 
+},1000);
