@@ -75,3 +75,109 @@ setInterval(function(){
   let myDate=new Date();
   clock.innerHTML=myDate.toLocaleTimeString(); 
 },1000);
+
+```
+
+### Project 4
+
+``` Javascript
+
+let guesssingNumber = parseInt(Math.random() * 100 + 1);
+
+const userInput = document.querySelector('#guessField');
+const submitButton = document.querySelector('#subt');
+const prevGuesses = document.querySelector('.guesses');
+const remGuesses = document.querySelector('.lastResult');
+const lowOrHi = document.querySelector('.lowOrHi');
+const resultPara = document.querySelector('.resultParas');
+
+const p = document.createElement('p');
+
+let arrprevGuesses = [];
+let numGuesses = 0;
+
+let playGame = true;
+
+if (playGame) {
+  submitButton.addEventListener('click', function (e) {
+    e.preventDefault();
+    const guess = parseInt(userInput.value);
+    console.log(guess);
+    validateGuess(guess);
+  });
+}
+
+function validateGuess(guess) {
+  if (isNaN(guess)) {
+    alert('Enter Valid Number');
+  } else if (guess > 100) {
+    alert('Enter less than 100 Number');
+  } else if (guess < 1) {
+    alert('Enter greater than 1 Number');
+  } else {
+    arrprevGuesses.push(guess);
+    if (numGuesses === 9) {
+      displayGuess(guess);
+      displayMessage(`Game Over ! Random number was ${guesssingNumber}`);
+      endGame();
+    } else {
+      displayGuess(guess);
+      checkGuess(guess);
+    }
+  }
+}
+
+function checkGuess(guess) {
+  if (guess === guesssingNumber) {
+    displayMessage(`You Guessed it right`);
+    endGame();
+  } else if (guess > guesssingNumber) {
+    displayMessage(`Number is too high`);
+  } else if (guess < guesssingNumber) {
+    displayMessage(`Number is too Low`);
+  }
+}
+
+function displayGuess(guess) {
+  userInput.value = '';
+  prevGuesses.innerHTML += `${guess}, `;
+  numGuesses++;
+  remGuesses.innerHTML = `${10 - numGuesses}`;
+}
+
+function displayMessage(message) {
+  lowOrHi.innerHTML = `<h2>${message}</h2>`;
+}
+
+function endGame() {
+  userInput.value = '';
+  userInput.setAttribute('disabled', '');
+  p.classList.add('button');
+  p.innerHTML = `<h2 id="newGame">Start new Game</h2>`;
+  resultPara.appendChild(p);
+  playGame = false;
+  newGame();
+}
+
+function newGame() {
+  newGameButton = document.querySelector('#newGame');
+  newGameButton.addEventListener('click', function (e) {
+    guesssingNumber = parseInt(Math.random() * 100 + 1);
+    arrprevGuesses = [];
+    numGuesses = 0;
+    prevGuesses.innerHTML = '';
+    remGuesses.innerHTML = `${10 - numGuesses}`;
+    userInput.removeAttribute('disabled', '');
+    lowOrHi.innerHTML = ``;
+    resultPara.removeChild(p);
+
+    playGame = true;
+  });
+}
+
+```
+
+### Project 5
+
+``` Javascript
+
