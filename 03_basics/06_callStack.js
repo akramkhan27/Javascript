@@ -1,3 +1,5 @@
+// (this) is the variable in above image
+
 // function One(){
 //     console.log("One");
 // }
