@@ -47,6 +47,21 @@ console.log(typeof views);
 console.log(typeof Me);
 console.log(typeof You);
 
+// Akram
+// VM627:32 object
+// VM627:33 object
+// VM627:34 function
+// VM627:35 string
+// VM627:36 number
+// VM627:37 number
+// VM627:38 boolean
+// VM627:39 object
+// VM627:40 undefined
+// VM627:41 undefined
+// VM627:42 bigint
+// VM627:43 symbol
+// VM627:44 symbol
+
 // ******************--------Memory---------***********************************
 
 // Stack (primitive) and Heap (non-primitive)
