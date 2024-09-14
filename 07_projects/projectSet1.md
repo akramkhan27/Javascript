@@ -9,36 +9,32 @@
 
 ``` Javascript
 
-console.log("Akram Khan");
-
-const buttons= document.querySelectorAll(".button");
-const body= document.querySelector("body");
-
-buttons.forEach(function (button){
-  console.log(button);
+const buttons=document.querySelectorAll(".button");
+const body=document.querySelector("body");
+buttons.forEach(function(button){
   button.addEventListener('click',function(e){
     console.log(e);
     console.log(e.target);
-    const backColor=e.target.id;
+    // sol1
+    body.style.backgroundColor=e.target.id;
 
-    switch(backColor){
-      case 'grey': 
-      body.style.backgroundColor=backColor;
-      break;
-      case 'white': 
-      body.style.backgroundColor=backColor;
-      break;
-      case 'blue': 
-      body.style.backgroundColor=backColor;
-      break;
-      case 'yellow': 
-      body.style.backgroundColor=backColor;
-      break;
-      case 'purple': 
-      body.style.backgroundColor=backColor;
-    }
-  });
-});
+    // sol2
+    // const color=e.target.id
+    // switch(color){
+    //   case "grey": body.style.backgroundColor=e.target.id;
+    //   break;
+    //   case "white": body.style.backgroundColor=e.target.id;
+    //   break;
+    //   case "blue": body.style.backgroundColor=e.target.id;
+    //   break;
+    //   case "yellow": body.style.backgroundColor=e.target.id;
+    //   break;
+    //   case "purple": body.style.backgroundColor=e.target.id;
+    //   break;
+    // }
+
+  })
+})
 
 ```
 
