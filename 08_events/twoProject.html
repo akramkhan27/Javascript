@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Chai Aur Akram</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const changeHead=()=>{
+        const heading=document.querySelector("#heading");
+        heading.innerHTML="Chai Aur Code";
+        console.log("Change");
+    }
+    setTimeout(changeHead,3000);
+
+    // const clear=setTimeout(()=>{
+    //     const heading=document.querySelector("#heading");
+    //     heading.innerHTML="Chai Aur Code";
+    //     console.log("Change");
+    // },3000)
+
+    
+    document.querySelector("#stop").addEventListener('click',(e)=>{
+        clearTimeout(clear);
+        console.log("STOPPED");
+    })
+</script>
+</html>
