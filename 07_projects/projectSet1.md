@@ -201,3 +201,36 @@ window.addEventListener('keydown', (e) => {
 
 ```
 
+### Project 6
+
+``` Javascript
+
+
+const randomColor=function(){
+  const hexNum="0123456789ABCDEF";
+  let color="#";
+  
+  for(let i=0; i<6; i++){
+    color+=hexNum[Math.floor(Math.random()*16)];
+  }
+  return color;
+}
+let stopChange;
+startChaningColor= function(){
+  changeColor=function(){
+    document.querySelector("body").style.backgroundColor=randomColor();
+  }
+  if(!stopChange){
+    stopChange=setInterval(changeColor,1000);
+  }
+  
+}
+stopChangingColor=function(){
+  clearInterval(stopChange);
+  stopChange=null;
+}
+const start=document.getElementById("start").addEventListener('click',startChaningColor);
+const stop=document.getElementById("stop").addEventListener('click',stopChangingColor);
+
+```
+
