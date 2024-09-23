@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical and Closure</title>
+</head>
+<body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    // // lexical scope
+    // //  example 
+    // //  inner function hass access of outer function properties 
+    
+    // function outer(){
+    //    const username="akram";
+    //    console.log("Outer ",username); 
+    //    // console.log("Outer ",email); // error cannot accessable
+    //    function inner(){
+    //        const email="akram@gmail.com";
+    //       console.log("Inner ",username);
+    //    }
+    //     function innerTwo(){
+    //        // console.log(email);
+    //        console.log("InnerTwo", username);
+    //    }
+    //    inner();
+    //    innerTwo();
+    // }
+    // outer();
+    // // console.log("Too Outer",username);// error cannot accesable
+
+
+        // Closure 
+
+        // function outer(){
+        //     const name="akram";
+        //     function inner(){
+        //         console.log(`The name is ${name}`);
+        //     }
+        //     return inner;
+        // }
+        // const myFunc=outer();
+        // myFunc();
+
+        // closure with realtime example
+
+        // document.getElementById('orange').onclick=function(){
+        //     document.querySelector('body').style.backgroundColor='orange';
+        // }
+        // document.getElementById('green').onclick=function(){
+        //     document.querySelector('body').style.backgroundColor='green';
+        // }
+
+        // using function
+
+        function clickHandler(color){
+            // document.querySelector('body').style.backgroundColor=`${color}`; // this execeuted before clicking the button
+            return function(){
+                document.querySelector('body').style.backgroundColor=`${color}`; // this execeuted before clicking the button
+            } 
+        }
+        document.getElementById(`orange`).onclick=clickHandler("orange");
+        document.getElementById(`green`).onclick=clickHandler("green");
+
+
+
+</script>
+</html>
